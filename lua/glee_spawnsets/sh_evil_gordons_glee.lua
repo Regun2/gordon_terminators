@@ -1,5 +1,5 @@
 local set = {
-    name = "evil_gordon_boss", -- unique name, matches the filename
+    name = "evil_gordons_glee", -- unique name, matches the filename
 }
 
 if SERVER then
