@@ -65,19 +65,8 @@ if SERVER then
     table.Merge( set, setSv )
 
 end
-
-local noShopReason = "There is no shop against Evil Gordon."
-
 function set:Activate()
-    self:Hook( "glee_blockshopopen", function()
-        return true, noShopReason
-
-    end )
-    -- the shop panel is only one way in, termhunt_purchase is the other, and this closes both
-    self:Hook( "glee_shop_canshow", function()
-        return false, noShopReason
-
-    end )
+    GAMEMODE.setHelpers.makeHardcore( self )
 end
 
 -- put the spawnset IN the global table to be gobbled
